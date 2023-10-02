@@ -178,10 +178,6 @@
     margin: 0;
 }
 
-.bet-button:first-child {
-    opacity: 0;
-}
-
 /* Лоты */
 .lots {
     margin: 180px 50px 0;
