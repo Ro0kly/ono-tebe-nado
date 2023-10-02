@@ -315,7 +315,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 160px 50px 0;
+    margin: 160px 50px 90px;
 }
 
 .navigation-vertical {
