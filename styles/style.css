@@ -51,12 +51,14 @@
 }
 
 .contacts-item {
+    display: block;
     font-family: "Raleway", "Arial", sans-serif;
     font-size: 18px;
     font-weight: normal;
     text-decoration: underline;
     text-underline-offset: 5px;
     margin: 4px;
+    color: black;
 }
 .contacts-item:last-child {
     text-decoration: none;
@@ -127,9 +129,11 @@
 .banner-main-content-item:first-child .banner-main-text-item:last-child {
     margin-left: 30px;
 }
+
 .banner-main-content-item:nth-child(2) .banner-main-text-item:last-child {
     margin-left: 30px;
 }
+
 .banner-main-content-item:nth-child(3) .banner-main-text-item:nth-child(2) {
     margin-left: 30px;
 }
@@ -165,7 +169,7 @@
     margin: 0 50px;
 }
 
-.bet-button:first-child{
+.bet-button:first-child {
     opacity: 0;
 }
 
