@@ -1,9 +1,8 @@
 /* место для вашего кода */
-
-
-.main {
-    margin: 0;
-}
+/*
+    Спасибо за подробные правки! Так мне стало понятнее: что и почему
+    Обратил внимание на бриф, в прошлой версии я его упустил
+*/
 
 /* Навигация */
 .header {
@@ -11,298 +10,290 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 90px 50px;
+    margin: 92px 50px 0 50px;
 }
 
-.navigation {
+.header__menu {
+    width: 33%;
+}
+
+.header__links-list {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 33%;
+    list-style: circle;
 }
 
-.navigation-list-item {
-    font-family: "Raleway", "Arial", sans-serif;
+.header__links-list-item {
     font-size: 18px;
     font-weight: normal;
-    text-decoration: underline;
     text-underline-offset: 5px;
-    margin: 0 0 0 13px;
+    margin: 0 0 0 27px;
 }
 
-.navigation-marker {
-    position: relative;
-    width: 7px;
-    height: 7px;
-    background: white;
-    border: 1px solid black;
-    border-radius: 50%;
-    margin-left: 13px;
-    margin-top: 4px;
-}
-
-.navigation-list-item:first-child {
+.header__links-list-item_no-bullit {
+    list-style: none;
     margin: 0;
+}
+
+.header__link_active {
     text-decoration: none;
 }
 
-.logo {
-    width: 148px;
-    height: 105px;
+.header__logo {
+    width: 130px;
+    height: 104px;
 }
 
-.navigation-contacts {
+.header__address {
     display: flex;
-    flex-direction: row-reverse;
     width: 33%;
+    justify-content: end;
 }
 
-.contacts-item {
-    display: block;
-    font-family: "Raleway", "Arial", sans-serif;
+.address {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.address-item {
     font-size: 18px;
     font-weight: normal;
-    text-decoration: underline;
+    font-style: normal;
     text-underline-offset: 5px;
-    margin: 4px;
     color: black;
-}
-.contacts-item:last-child {
-    text-decoration: none;
+    margin: 2px;
 }
 
 /* Баннер */
-.banner-base {
+.cover {
     position: relative;
+    min-height: 757px;
+    background-image: url("/images/cover.jpg");
+    background-size: cover;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 100px 0 0 0;
+}
+
+.overlay {
+    z-index: 0;
+    position: absolute;
     width: 100%;
-    height: 757px;
-    margin-top: 96px;
-}
-
-.banner-img {
-    width: inherit;
-    height: inherit;
-    position: absolute;
-}
-
-.black-opacity-cover {
-    position: absolute;
-    width: inherit;
-    height: inherit;
+    min-height: 100%;
     background: black;
     opacity: 60%;
 }
 
-.banner-main-content {
-    position: absolute;
-    display: flex;
-    width: inherit;
-    flex-direction: column;
-    gap: 0px;
-}
-
-.banner-main-content-item {
-    display: flex;
-    gap: 30px;
-}
-
-.banner-main-content-item:nth-child(1) {
-    justify-content: start;
-    padding-left: 50px;
-}
-
-.banner-main-content-item:nth-child(2) {
-    justify-content: center;
-    padding-right: 50px;
-}
-
-.banner-main-content-item:nth-child(3) {
-    justify-content: end;
-    padding-right: 50px;
-    padding-bottom: 50px;
-}
-
-.banner-main-text-item {
-    font-family: "Raleway", "Arial", sans-serif;
-    font-size: 100px;
-    font-weight: bold;
+.cover__title {
+    z-index: 1;
+    position: relative;
     color: white;
+    font-weight: bold;
+    font-size: 100px;
     text-transform: uppercase;
-    margin: 0;
-}
-
-.banner-main-content-item:first-child .banner-main-text-item:last-child {
-    margin-left: 30px;
-}
-
-.banner-main-content-item:nth-child(2) .banner-main-text-item:last-child {
-    margin-left: 30px;
-}
-
-.banner-main-content-item:nth-child(3) .banner-main-text-item:nth-child(2) {
-    margin-left: 30px;
-}
-
-.banner-bottom-content {
+    letter-spacing: 30px;
     display: flex;
-    justify-content: end;
-    position: absolute;
     align-items: center;
-    width: inherit;
-    bottom: 50px;
-    gap: 80px;
+    flex-direction: column;
+    top: 165px;
+    padding: 0 50px;
+}
+
+.cover__title-item-padding-right {
     padding-right: 50px;
 }
 
-.banner-bottom-content-text {
-    display: inline-block;
-    font-family: "Raleway", "Arial", sans-serif;
+.letter-spacing-extended {
+    letter-spacing: 60px;
+}
+
+.no-letter-spacing {
+    letter-spacing: 0px;
+}
+
+.aligned-text_left {
+    align-self: flex-start;
+}
+
+.aligned-text_right {
+    align-self: flex-end;
+}
+
+.cover__description {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 78px;
+    padding-right: 50px;
+    margin-bottom: 50px;
+}
+
+.cover__description-text {
+    color: white;
     font-size: 22px;
     font-weight: normal;
-    color: white;
     text-transform: uppercase;
-    word-spacing: 18px;
-    margin: 0;
+    word-spacing: 20px;
 }
 
 .bet-button {
-    display: inline-block;
-    width: 257px;
+    color: white;
+    font-size: 22px;
+    font-weight: normal;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 12px 32px;
     border: 1px solid white;
-    text-align: center;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    word-spacing: normal;
-    margin: 0;
 }
 
 /* Лоты */
 .lots {
-    margin: 180px 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 180px 50px 0 50px;
 }
 
-.lots-head-title {
-    font-family: "Raleway", "Arial", sans-serif;
+.lots__heading {
     font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
     color: black;
-    margin: 0 0 0 40px;
+    margin-left: 40px;
 }
 
-.lots-more-title {
-    font-family: "Raleway", "Arial", sans-serif;
+.lots__look-more-link {
+    z-index: 1;
     font-size: 20px;
     font-weight: normal;
-    text-transform: lowercase;
     text-decoration: underline;
     text-underline-offset: 5px;
     color: black;
-    margin: 0 0 0 40px;
+    margin-left: 40px;
 }
 
-.lots-base {
+.lots__card-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 25px auto 25px;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
-.lot {
-    position: relative;
+.lots__card-list-item {
     width: 430px;
-    height: 450px;
+    min-height: 450px;
+    flex-grow: 1;
 }
 
-.lot-img {
-    position: absolute;
-    width: inherit;
-    height: inherit;
+.card-link {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
 }
 
-.lot-content {
-    display: flex;
+.card {
     position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: inherit;
-    height: inherit;
 }
 
-.lot-title {
-    font-family: "Raleway", "Arial", sans-serif;
+.card_type_film  {
+    background-image: url("/images/card-lot-01.jpg");
+}
+
+.card_type_book {
+    background-image: url("/images/card-lot-02.jpg");
+}
+
+.card_type_picture {
+    background-image: url("/images/card-lot-03.jpg");
+}
+
+.card__title {
+    z-index: 1;
     font-size: 22px;
     font-weight: bold;
-    color: white;
-    text-transform: uppercase;
     text-decoration: underline;
-    margin: 50px 40px 0px;
+    text-underline-offset: 5px;
+    text-transform: uppercase;
+    color: white;
+    padding: 50px 40px 0 40px;
 }
 
-.lot-description {
-    font-family: "Raleway", "Arial", sans-serif;
+.card__text {
+    z-index: 1;
     font-size: 20px;
     font-weight: normal;
     color: white;
-    margin: 0px 40px 50px;
+    padding: 0 40px 50px 40px;
 }
 
 /* Описание */
-.about-base {
-    position: relative;
+.about {
     display: flex;
-    justify-content: flex-start;
-    margin: 180px 50px 0 145px;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 180px 50px 0 50px;
 }
 
-.about-logo {
-    position: relative;
+.about__column:first-child {
+    display: flex;
+    width: 430px;
+    min-height: 450px;
+    justify-content: center;
+}
+
+.about__column:last-child {
+    flex: 1;
+}
+
+.about__logo {
+    width: 240px;
+    height: 240px;
+    background: black;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 240px;
-    height: 240px;
-    margin: 0 120px 0 0;
 }
 
-.about-logo-background {
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    border-radius: 50%;
-    background: black;
+.about__logo-image {
+    width: 150px;
+    height: 115px;
 }
 
-.about-logo-img {
-    position: absolute;
-    width: 148px;
-    height: 114px;
-}
-
-.about-text {
-    width: 70%;
-    margin: 110px 0 0 0;
-}
-
-.about-title {
-    font-family: "Raleway", "Arial", sans-serif;
+.about__title {
     font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
     color: black;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 
-.about-description {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    font-family: "Raleway", "Arial", sans-serif;
+.about__text {
     font-size: 20px;
     font-weight: normal;
     color: black;
+}
+/* 
+    В задании указано, что второму абзацу нижний отступ не нужен: отсюда и last-child
+    Но я бы лучше сделал flexbox по вертикали (или другое блоковое проперти) и gap, вдруг еще текст будет,
+    но это + класс если стараемся попиксельно делать
+    Попробовал использовать только указанные в брифе классы
+*/
+.about__text:last-child {
+    margin-top: 25px;
 }
 
 /* Футер */
@@ -310,47 +301,46 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin: 160px 50px 90px;
+    margin: 180px 50px 90px 50px;
 }
 
-.navigation-vertical {
+.footer__address {
+    display: flex;
+    width: 33%;
+    justify-content: start;
+}
+
+.footer__menu-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
+    list-style: none;
 }
 
-.navigation-list-item-vertical {
-    font-family: "Raleway", "Arial", sans-serif;
+.footer__menu-list-item {
     font-size: 18px;
     font-weight: normal;
-    text-decoration: underline;
     text-underline-offset: 5px;
-    margin: 0;
 }
 
-.navigation-list-item-vertical:first-child {
-    margin: 0;
+.footer__menu-link_active {
     text-decoration: none;
 }
 
-.navigation-contacts-footer {
+.footer-social {
+    display: flex;
+    width: 33%;
+    justify-content: end;
+}
+
+.footer__social-list {
     display: flex;
     flex-direction: row;
-    width: 33%;
-}
-
-.social-networks {
-    display: flex;
-    width: 33%;
-    flex-direction: row-reverse;
     gap: 48px;
-    margin: 0;
+    list-style: none;
 }
 
-.social-networks-item {
+.footer__social-list-item {
     width: 48px;
     height: 48px;
-    margin: 0;
 }
